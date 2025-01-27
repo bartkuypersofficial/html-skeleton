@@ -18,14 +18,14 @@ function clean(cb) {
 }
 
 function styles(cb) {
-  return src('assets/scss/**/*.scss')
+  return src('scss/**/*.scss')
     .pipe(sass().on("error", sass.logError))
-	  .pipe(gcmq())
+    .pipe(gcmq())
     .pipe(dest('../css'))
-    .pipe(postcss([ 
-	    autoprefixer(), 
-	    cssnano() 
-	  ]))
+    .pipe(postcss([
+      autoprefixer(), 
+        cssnano() 
+      ]))
     .pipe(rename({
       extname: '.min.css'
     }))
@@ -34,7 +34,7 @@ function styles(cb) {
 }
 
 function scsslint(cb) {
-  return src('assets/scss/**/*.scss')
+  return src('scss/**/*.scss')
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
@@ -42,10 +42,10 @@ function scsslint(cb) {
 }
 
 function scripts(cb) {
-  return src(['assets/scripts/main.js', 'assets/scripts/**/*.js'])
-	  .pipe(insert.append('\n\n'))  
+  return src(['scripts/main.js', 'scripts/**/*.js'])
+    .pipe(insert.append('\n\n'))  
     .pipe(concat('main.js'))
-	  .pipe(dest('../js'))
+    .pipe(dest('../js'))
     .pipe(uglify())
     .pipe(rename({
       extname: '.min.js'
@@ -55,8 +55,8 @@ function scripts(cb) {
 }
 
 function watching() {
-	watch('assets/scss/**/*.scss', parallel(styles, scsslint));
-	watch('assets/scripts/**/*.js', parallel(scripts));
+    watch('scss/**/*.scss', parallel(styles, scsslint));
+    watch('scripts/**/*.js', parallel(scripts));
 }
 
 exports.clean = clean;
