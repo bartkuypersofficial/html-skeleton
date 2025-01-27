@@ -1,0 +1,23 @@
+// =============================================================
+// Spacing
+// =============================================================
+
+
+
+// Assign our `$base-line-height` 
+// to a new spacing var for more transparency
+
+$space:                   $base-line-height !default;
+
+
+// Smaller units
+
+$space-half:              calc($space / 2) !default;
+$space-quarter:           calc($space / 4) !default;
+
+
+// Larger units
+
+$space-double:            calc($space * 2) !default;
+$space-triple:            calc($space * 3) !default;
+$space-quadruple:         calc($space * 4) !default;
