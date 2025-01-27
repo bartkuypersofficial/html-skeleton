@@ -1,0 +1,23 @@
+// ======================================================================================
+//  Page
+// ======================================================================================
+
+
+
+.o-body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+.o-header {
+  display: flex;
+}
+
+.o-main {
+  display: flex;
+}
