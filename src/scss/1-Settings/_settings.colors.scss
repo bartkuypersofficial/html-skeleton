@@ -1,0 +1,46 @@
+// ======================================================================================
+//  Here we set our color palette
+// ======================================================================================
+
+
+
+// ==========================================
+//  Global color variables.
+// ==========================================
+
+
+@function lighten-color($color, $percentage) {
+  @return lighten($color, $percentage);
+}
+
+@function darken-color($color, $percentage) {
+  @return darken($color, $percentage);
+}
+
+$brand-primary: #c00000 !default;     //  Red
+$brand-primary-light: lighten-color($brand-primary, 5%) !default;
+$brand-primary-lighter: lighten-color($brand-primary, 10%) !default;
+$brand-primary-dark: darken-color($brand-primary, 5%) !default;
+$brand-primary-darker: darken-color($brand-primary, 10%) !default;
+
+$brand-neutral: #090909 !default;     //  Gray
+$brand-neutral-600: #1c1c1c !default;
+$brand-neutral-500: #3f3f3f !default;
+$brand-neutral-400: #686868 !default;
+$brand-neutral-300: #8f8f8f !default;
+$brand-neutral-200: #b3b3b3 !default;
+$brand-neutral-100: #dadae5 !default;
+
+$color-success: #97c14a !default;     //  Green
+$color-info: #4b92db !default;        //  Blue
+$color-warning: #ffa500 !default;     //  Yellow
+$color-alert: #dd1717 !default;       //  Red
+
+
+// ==========================================
+//  Two color extremes, lightest
+//  and darkest colors.
+// ==========================================
+
+$white: #ffffff !default;
+$black: #000000 !default;
