@@ -1,0 +1,95 @@
+// =============================================================
+// Print
+// =============================================================
+
+
+
+@media print {
+  html {
+    width: auto;
+    height: auto;
+    margin: 5%;
+    padding: 0;
+    float: none !important;
+    border: none;
+    background: #ffffff;
+    font-size: 9pt !important;
+    overflow: visible;
+  }
+
+  input,
+  .u-hide-for-print,
+  *::before,
+  *::after {
+    display: none !important;
+  }
+
+  body,
+  p,
+  td,
+  li,
+  div,
+  a,
+  span {
+    color: #000000;
+    font-family: $font-base !important;
+    font-size: 9pt !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    height: auto;
+    color: #000000 !important;
+    font-family: $font-base !important;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-shadow: 0 0 0 #000000 !important;
+  }
+
+  h1 {
+    font-size: 22pt !important;
+  }
+
+  h2 {
+    font-size: 20pt !important;
+  }
+
+  h3 {
+    font-size: 18pt !important;
+  }
+
+  h4 {
+    font-size: 18pt !important;
+    font-variant: small-caps;
+  }
+
+  h5 {
+    font-size: 17pt !important;
+  }
+
+  h6 {
+    font-size: 16pt !important;
+    font-style: italic;
+  }
+
+  a:link,
+  a:visited {
+    color: #000000 !important;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+}

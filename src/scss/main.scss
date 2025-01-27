@@ -1,0 +1,80 @@
+﻿@charset 'UTF-8';
+
+/*
+______            _     _   __      _ _                     
+| ___ \          | |   | | / /     (_|_)                    
+| |_/ / __ _ _ __| |_  | |/ / _   _ _ _ _ __   ___ _ __ ___ 
+| ___ \/ _` | '__| __| |    \| | | | | | '_ \ / _ \ '__/ __|
+| |_/ / (_| | |  | |_  | |\  \ |_| | | | |_) |  __/ |  \__ \
+\____/ \__,_|_|   \__| \_| \_/\__,_|_| | .__/ \___|_|  |___/
+                                    _/ | |                  
+                                   |__/|_|                  							
+------------------------------------------------------------
+[Design System]
+
+Version: 1.0
+Copyright © 2025 by Bart Kuijpers
+	
+"One file to rule them all, One file to find them,
+ One file to bring them all, And in the Sass way merge them."
+ - J.R.R. Tolkien
+------------------------------------------------------------
+*/
+
+
+// 1 SETTINGS - Global variables, site-wide settings, config switches etc.
+// ====================================================================================================
+@import '1-Settings/settings.colors';
+@import '1-Settings/settings.theming';
+@import '1-Settings/settings.config';
+@import '1-Settings/settings.typography';
+@import '1-Settings/settings.spacing';
+@import '1-Settings/settings.mediaqueries';
+@import '1-Settings/settings.site';
+@import '1-Settings/settings.zindex';
+
+
+// 2 Tools - Site wide mixins and functions
+// ====================================================================================================
+@import '2-Tools/tools.toolbox';
+@import '2-Tools/tools.mediaqueries';
+@import '2-Tools/tools.givebreakpoint';
+
+
+// 3 Generic - Ground-zero styles / Low-specificity, far-reaching rulesets. (resets, box-sizing etc.)
+// ====================================================================================================
+@import '3-Generic/generic.normalize';
+@import '3-Generic/generic.reset';
+
+
+// 4 Base - Unclassed HTML elements (type selectors)
+// ====================================================================================================
+@import '4-Base/base.html';
+@import '4-Base/base.images';
+@import '4-Base/base.lists';
+@import '4-Base/base.tables';
+@import '4-Base/base.typography';
+
+
+// 5 Objects - Design patterns (e.g. .media)
+// ====================================================================================================
+@import '5-Objects/objects.page';
+
+
+// 6 Components - Discrete complete chunks of UI. Designed components
+// ====================================================================================================
+@import '6-Components/components.buttons';
+
+
+// 7 Utility - High-specificity, very explicit selectors. Overrides and helper classes.
+// ====================================================================================================
+@import '7-Utility/utility.helpers';
+@import '7-Utility/utility.states';
+
+
+// External Libraries
+// ====================================================================================================
+// No imports so far.
+
+
+@import 'print';
