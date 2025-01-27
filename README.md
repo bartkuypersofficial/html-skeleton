@@ -1,13 +1,4 @@
-   _____       _      _____ 
-  / ____|     | |    | ____|
- | |  __ _   _| |_ __| |__  
- | | |_ | | | | | '_ \___ \ 
- | |__| | |_| | | |_) |__) |
-  \_____|\__,_|_| .__/____/ 
-                | |         
-                |_|         
-
-[Design System]
+[Gulp 5 Design System Skeleton]
 
 Version: 1.0
 Author: Bart Kuijpers
