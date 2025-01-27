@@ -1,29 +1,3 @@
-                                                      
-                                                                                          
-        GGGGGGGGGGGGG                  lllllll                         555555555555555555 
-     GGG::::::::::::G                  l:::::l                         5::::::::::::::::5 
-   GG:::::::::::::::G                  l:::::l                         5::::::::::::::::5 
-  G:::::GGGGGGGG::::G                  l:::::l                         5:::::555555555555 
- G:::::G       GGGGGGuuuuuu    uuuuuu   l::::lppppp   ppppppppp        5:::::5            
-G:::::G              u::::u    u::::u   l::::lp::::ppp:::::::::p       5:::::5            
-G:::::G              u::::u    u::::u   l::::lp:::::::::::::::::p      5:::::5555555555   
-G:::::G    GGGGGGGGGGu::::u    u::::u   l::::lpp::::::ppppp::::::p     5:::::::::::::::5  
-G:::::G    G::::::::Gu::::u    u::::u   l::::l p:::::p     p:::::p     555555555555:::::5 
-G:::::G    GGGGG::::Gu::::u    u::::u   l::::l p:::::p     p:::::p                 5:::::5
-G:::::G        G::::Gu::::u    u::::u   l::::l p:::::p     p:::::p                 5:::::5
- G:::::G       G::::Gu:::::uuuu:::::u   l::::l p:::::p    p::::::p     5555555     5:::::5
-  G:::::GGGGGGGG::::Gu:::::::::::::::uul::::::lp:::::ppppp:::::::p     5::::::55555::::::5
-   GG:::::::::::::::G u:::::::::::::::ul::::::lp::::::::::::::::p       55:::::::::::::55 
-     GGG::::::GGG:::G  uu::::::::uu:::ul::::::lp::::::::::::::pp          55:::::::::55   
-        GGGGGG   GGGG    uuuuuuuu  uuuullllllllp::::::pppppppp              555555555     
-                                               p:::::p                                    
-                                               p:::::p                                    
-                                              p:::::::p                                   
-                                              p:::::::p                                   
-                                              p:::::::p                                   
-                                              ppppppppp                                   
-                                                                                                                                                  
-
 [Design System]
 
 Version: 1.0
