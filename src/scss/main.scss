@@ -1,4 +1,4 @@
-﻿@charset 'UTF-8';
+@charset 'UTF-8';
 
 /*
 ______            _     _   __      _ _                     
@@ -25,56 +25,58 @@ Copyright © 2025 by Bart Kuijpers
 // 1 SETTINGS - Global variables, site-wide settings, config switches etc.
 // ====================================================================================================
 @import '1-Settings/settings.colors';
-@import '1-Settings/settings.theming';
-@import '1-Settings/settings.config';
 @import '1-Settings/settings.typography';
-@import '1-Settings/settings.spacing';
-@import '1-Settings/settings.mediaqueries';
-@import '1-Settings/settings.site';
-@import '1-Settings/settings.zindex';
+@import '1-Settings/settings.breakpoints';
+@import '1-Settings/settings.variables';
+@import '1-Settings/settings.config';
 
 
 // 2 Tools - Site wide mixins and functions
 // ====================================================================================================
 @import '2-Tools/tools.toolbox';
-@import '2-Tools/tools.mediaqueries';
-@import '2-Tools/tools.givebreakpoint';
+@import '2-Tools/tools.media-queries';
+@import '2-Tools/tools.normalize';
+@import '2-Tools/tools.reset';
 
 
-// 3 Generic - Ground-zero styles / Low-specificity, far-reaching rulesets. (resets, box-sizing etc.)
-// ====================================================================================================
-@import '3-Generic/generic.normalize';
-@import '3-Generic/generic.reset';
+// 3 Elements
+// Unclassed HTML elements (type selectors)
+// ======================================================================================
+@import '3-Elements/elements.base';
+@import '3-Elements/elements.headings';
+@import '3-Elements/elements.images';
+@import '3-Elements/elements.lists';
+@import '3-Elements/elements.tables';
 
 
-// 4 Base - Unclassed HTML elements (type selectors)
-// ====================================================================================================
-@import '4-Base/base.html';
-@import '4-Base/base.images';
-@import '4-Base/base.lists';
-@import '4-Base/base.tables';
-@import '4-Base/base.typography';
+// 4 Objects
+// Complete chunks of UI (e.g. headers, footers, regions, blocks)
+// ======================================================================================
+@import '4-Objects/objects.page';
 
 
-// 5 Objects - Design patterns (e.g. .media)
-// ====================================================================================================
-@import '5-Objects/objects.page';
+// 5 Components
+// Discrete chunks of UI. Designed components
+// ======================================================================================
+@import '5-Components/components.buttons';
 
 
-// 6 Components - Discrete complete chunks of UI. Designed components
-// ====================================================================================================
-@import '6-Components/components.buttons';
+// 6 Utility
+// High-specificity, very explicit selectors.
+// Overrides and helper classes.
+// ======================================================================================
+@import '6-Utilities/utilities.helpers';
+@import '6-Utilities/utilities.states';
+@import '6-Utilities/utilities.print';
 
 
-// 7 Utility - High-specificity, very explicit selectors. Overrides and helper classes.
-// ====================================================================================================
-@import '7-Utility/utility.helpers';
-@import '7-Utility/utility.states';
-
-
-// External Libraries
-// ====================================================================================================
+// 7 External Libraries
+// ======================================================================================
 // No imports so far.
 
 
-@import 'print';
+//  8 Fonts
+//  When fonts are used in SCSS
+//  Fonts will be imported.
+// ======================================================================================
+@include font-import;
