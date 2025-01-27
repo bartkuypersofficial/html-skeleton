@@ -1,0 +1,49 @@
+// ======================================================================================
+//  Headings
+// ======================================================================================
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include unitize(margin, 24, 0, 16);
+  @include font('opensans');
+  text-transform: uppercase;
+}
+
+h1 {
+  @include unitize(font-size, 32);
+}
+
+h2 {
+  @include unitize(font-size, 28);
+}
+
+h3 {
+  @include unitize(font-size, 24);
+}
+
+h4 {
+  @include unitize(font-size, 20);
+}
+
+h5 {
+  @include unitize(font-size, 18);
+}
+
+h6 {
+  @include unitize(font-size, 16);
+}
+
+
+h4, 
+h5, 
+h6 {
+  @include font('opensans', 'light');
+  margin-bottom: 0;
+  font-weight: 400;
+}

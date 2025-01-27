@@ -1,0 +1,209 @@
+// ======================================================================================
+//  Base, a thin layer on top of normalize.css
+// ======================================================================================
+
+
+
+// ==========================================
+//  To get IE10 in snap mode to play nicely
+//  we have to use CSS Device Adaptation.
+//  https://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+// ==========================================
+
+// sass-lint:disable no-vendor-prefixes
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  @include unitize(font-size, 16); 
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: scrollbar;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  @include unitize(padding, 12);
+  @include font('opensans');
+  @include unitize(font-size, 16);
+  min-height: 100%;
+  margin: 0;
+  background: $page-background-color;
+  color: $page-text-color;
+  overflow-x: hidden;
+}
+
+a {
+  transition: color $transition-speed $transition-ease;
+  color: $link-text-color;
+  text-decoration: underline;
+
+  &:not([class]):hover {
+    color: $link-text-color--hover;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    outline-offset: unset;
+  }
+}
+
+hr {
+  border: none;
+  @include border(top);
+}
+
+blockquote,
+dl,
+dd,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+fieldset,
+figure,
+hr {
+  margin: 0;
+}
+
+p,
+ul,
+ol {
+  @include unitize(margin-top, 12);
+  @include unitize(line-height, 32);
+}
+
+fieldset,
+ol,
+ul {
+  padding: 0;
+}
+
+iframe,
+fieldset {
+  border: none;
+}
+
+
+// ==========================================
+//  Set the default selection
+// ==========================================
+
+::selection {
+  background: $brand-neutral-600;
+  color: $brand-neutral-100;
+  text-shadow: none;
+}
+
+
+// ==========================================
+//  Custom scrollbar styles
+// ==========================================
+
+* {
+  // sass-lint:disable-block no-misspelled-properties
+  scrollbar-width: thin;
+  scrollbar-color: $brand-neutral-300 transparent;
+
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+*::-webkit-scrollbar {
+  @include unitize(width, 10);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $brand-neutral-300;
+}
+
+
+// ==========================================
+//  Needed for iOS to prevent input zooming
+//  https://uxcellence.com/2014/01/15/quick-fix-increase-font-size-to-16px-to-fix-input-zoom
+// ==========================================
+
+input,
+select,
+textarea {
+  font-size: $base-font-size;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: $base-font-size;
+}
+
+ul {
+  list-style: none;
+
+  li::before {
+    @include unitize(font-size, 20);
+    display: inline-block;
+    width: 1em;
+    margin-left: -.875em;
+    color: $white;
+    line-height: 0;
+    content: '•';
+    vertical-align: middle;
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+
+  li {
+    counter-increment: li;
+
+    &::before {
+      @include unitize(min-width, 30);
+      @include unitize(padding-right, 12);
+      display: inline-block;
+      margin-left: -1.125em;
+      content: counter(li);
+    }
+  }
+}
+
+blockquote {
+  @include unitize(margin, 24, 48, 24, 24);
+  @include unitize(padding, 0, 24);
+  @include font('opensans', 'bold');
+  @include unitize(font-size, 18);
+  border-left: 2px solid $brand-primary-light;
+  color: $brand-primary;
+  font-style: italic;
+
+  @include mq(md) {
+    margin-right: 25%;
+  }
+}
+
+.lead {
+  @include unitize(font-size, 16);
+  @include font('opensans', 'bold');
+  font-style: italic;
+}
